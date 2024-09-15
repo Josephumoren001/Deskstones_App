@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import HeroFivee from "../assets/Rectangle-48.svg" ;
 import arrow from "../assets/formkit_arrowright.svg"
 const HeroFive = () => {
@@ -22,10 +23,10 @@ const HeroFive = () => {
         </div>
         <div className="pt-10 flex gap-3 ">
          
-          <button className="border border-[#10CC6F] rounded-[0.3125rem] text-white text-[0.875rem] font-bold px-[1.25rem] py-[0.625rem] flex items-center gap-3">
+          <Link to='/register' className="border border-[#10CC6F] rounded-[0.3125rem] text-white text-[0.875rem] font-bold px-[1.25rem] py-[0.625rem] flex items-center gap-3">
             Get Started 
             <img src={arrow} />
-          </button>
+          </Link>
         </div>
       </div>
     </div>

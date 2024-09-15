@@ -20,6 +20,7 @@ import Mentorship from './pages/Mentorship';
 import Blog from "./pages/Blog";
 import Register from './components/Register';
 import Media from "./pages/Media";
+import BecomeMentor from "./pages/BecomeMentor";
 const App = () => {
   return (
    <BrowserRouter>
@@ -37,6 +38,8 @@ const App = () => {
       <Route path="/blogs" element={ <Blog /> } />
       <Route path="/register" element={ <Register /> } />
       <Route path="/media" element={ <Media /> } />
+      <Route path="/becomeamentor" element={ <BecomeMentor /> } />
+      
      
       <Route element={<PrivateRoute />}> 
       <Route path="/dashboard" element={ <Dashboard /> } />

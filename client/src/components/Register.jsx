@@ -21,7 +21,7 @@ function Register() {
       <div className="container mx-auto p-6 md:flex md:items-center md:justify-between space-y-6 md:space-y-0 md:space-x-12">
         {/* Left side with Heading */}
         <div className="md:w-1/2 dark:text-white text-gray-700">
-          <h1 className="text-3xl md:text-4xl font-bold">Become a Deskstones <br /> Mentor</h1>
+          <h1 className="text-3xl md:text-4xl font-bold">Become a <span className='text-green-500'> Deskstones</span> <br /> Expert</h1>
         </div>
 
         {/* Right side with form */}
@@ -85,7 +85,7 @@ function Register() {
 
             {/* Role */}
             <div>
-              <label className="block text-sm font-medium text-gray-700">Role</label>
+              <label className="block text-sm font-medium text-gray-700">Programs</label>
               <select
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
@@ -93,11 +93,11 @@ function Register() {
                 required
                 className="text-gray-600 mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
               >
-                <option value="">Select Role</option>
-                <option value="backend">Backend Developer</option>
-                <option value="frontend">Frontend Developer</option>
-                <option value="ml">ML Engineer</option>
-                <option value="others">Others</option>
+                <option value="">Select Programs</option>
+                <option value="backend">Kid Can Code</option>
+                <option value="frontend">Distraction to Distinction</option>
+                <option value="ml">Consultation</option>
+                
               </select>
               <ValidationError prefix="Role" field="role" errors={state.errors} />
             </div>
