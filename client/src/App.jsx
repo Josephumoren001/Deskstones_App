@@ -14,7 +14,6 @@ import CreatePost from "./pages/CreatePost";
 import UpdatePost from "./pages/UpdatePost";
 import PostPage from "./pages/PostPage";
 import ScrollToTop from "./components/ScrollToTop";
-// import Search from "./pages/search";
 import Programs from "./pages/Programs";
 import Consulting from './pages/Consulting';
 import Mentorship from './pages/Mentorship';
