@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaEnvelope, FaLinkedin, FaYoutube } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, } from 'react-icons/fa';
 
 function MentorWrapper() {
   const [mentors, setMentors] = useState([]);
@@ -10,7 +10,7 @@ function MentorWrapper() {
     const fetchMentors = async () => {
       try {
         setLoading(true);
-        const res = await fetch('/api/mentors/getmentors?approvalStatus=approved');
+        const res = await fetch('/api/mentor/getmentors?approvalStatus=approved');
         const data = await res.json();
         if (!res.ok) {
           console.error('API response error:', data);
@@ -53,25 +53,19 @@ function MentorWrapper() {
               <img
                 src={mentor.imageUrl} // Use mentor's image URL from backend
                 alt={mentor.name}
-                className="w-full rounded-t-lg mb-4"
+                className="w-[100px] h-[100px] rounded-full mb-4"
               />
-              <h2 className="text-xl font-bold">{mentor.fullName}</h2>
-              <h3 className="text-green-500 mb-4">{mentor.role}</h3>
+              <h2 className="text-xl font-bold dark:text-gray-700 ">{mentor.fullName}</h2>
+              <h3 className="text-white mb-4 bg-green-500 px-6 py-2 rounded-lg mt-3">{mentor.role}</h3>
               <p className="text-gray-700 text-center mb-6">{mentor.bio}</p>
               <div className="flex space-x-4">
                 <a href={`mailto:${mentor.email}`} className="text-gray-500 hover:text-gray-900">
                   <FaEnvelope size={24} />
                 </a>
-                {mentor.linkedin && (
-                  <a href={mentor.linkedin} className="text-gray-500 hover:text-gray-900">
-                    <FaLinkedin size={24} />
-                  </a>
-                )}
-                {mentor.youtube && (
-                  <a href={mentor.youtube} className="text-gray-500 hover:text-gray-900">
-                    <FaYoutube size={24} />
-                  </a>
-                )}
+
+                <a href={`${mentor.linkedin}`} className="text-gray-500 hover:text-gray-900">
+                  <FaLinkedin size={24} />
+                </a>
               </div>
             </div>
           ))}

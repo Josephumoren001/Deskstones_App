@@ -60,6 +60,8 @@ const BecomeMentor = () => {
         body: JSON.stringify({
           fullName: formData.fullName,
           role: formData.role,
+          email: formData.email,
+          linkedin: formData.linkedin,
           bio: formData.bio,
           imageUrl,
         }),
@@ -142,6 +144,24 @@ const BecomeMentor = () => {
           value={formData.role}
           onChange={handleChange}
           placeholder="Role"
+          className="w-full p-2 border rounded text-gray-600"
+          required
+        />
+          <input
+          type="text"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          placeholder="Email"
+          className="w-full p-2 border rounded text-gray-600"
+          required
+        />
+          <input
+          type="text"
+          name="linkedin"
+          value={formData.linkedin}
+          onChange={handleChange}
+          placeholder="LinkedIn URL"
           className="w-full p-2 border rounded text-gray-600"
           required
         />

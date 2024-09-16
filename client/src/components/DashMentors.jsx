@@ -61,13 +61,11 @@ const DashMentors = () => {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
-          // Assuming you have a token or auth mechanism for admin actions
           Authorization: `Bearer ${currentUser?.token}`, 
         },
       });
       const data = await res.json();
       if (res.ok) {
-        // Update the mentors state with the updated mentor
         setMentors((prevMentors) =>
           prevMentors.map((mentor) =>
             mentor._id === mentorId ? data : mentor
@@ -82,30 +80,26 @@ const DashMentors = () => {
     }
   };
 
-  // Function to handle assigning a mentor
-  const handleAssign = async (mentorId) => {
+  // Function to handle deleting a mentor
+  const handleDeleteUser = async (mentorId) => {
     try {
-      const res = await fetch(`/api/mentor/assignMentor/${mentorId}`, {
-        method: 'PUT',
+      const res = await fetch(`/api/mentor/deleteMentor/${mentorId}`, {
+        method: 'DELETE',
         headers: {
-          'Content-Type': 'application/json',
           Authorization: `Bearer ${currentUser?.token}`,
         },
       });
       const data = await res.json();
       if (res.ok) {
-        // Update the mentors state with the updated mentor
         setMentors((prevMentors) =>
-          prevMentors.map((mentor) =>
-            mentor._id === mentorId ? data : mentor
-          )
+          prevMentors.filter((mentor) => mentor._id !== mentorId)
         );
       } else {
-        alert(`Failed to assign mentor: ${data.message}`);
+        alert(`Failed to delete mentor: ${data.message}`);
       }
     } catch (error) {
-      console.error('Error assigning mentor:', error);
-      alert('An error occurred while assigning the mentor.');
+      console.error('Error deleting mentor:', error);
+      alert('An error occurred while deleting the mentor.');
     }
   };
 
@@ -126,7 +120,7 @@ const DashMentors = () => {
       <h1 className="text-2xl font-bold mb-4">Manage Mentors</h1>
 
       {/* Filter Dropdown */}
-      <div className="mb-4">
+      <div className="mb-4 dark:text-gray-600">
         <label htmlFor="filter" className="block mb-2 font-semibold">Filter by status:</label>
         <select
           id="filter"
@@ -144,10 +138,12 @@ const DashMentors = () => {
       {/* Mentors Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredMentors.map((mentor) => (
-          <div key={mentor._id} className="bg-white shadow-lg rounded-lg p-4">
+          <div key={mentor._id} className="bg-white shadow-lg rounded-lg p-4 dark:text-gray-600">
             <img src={mentor.imageUrl} alt={mentor.fullName} className="w-full h-48 object-cover rounded-lg mb-2" />
             <h2 className="text-xl font-semibold">{mentor.fullName}</h2>
             <p className="text-gray-600">{mentor.role}</p>
+            <p className="text-gray-600">{mentor.email}</p>
+            <p className="text-gray-600">{mentor.linkedin}</p>
             <p className="mt-2">{mentor.bio}</p>
             <p className="mt-2"><strong>Status:</strong> {mentor.approvalStatus}</p>
             <p><strong>Assigned:</strong> {mentor.isAssigned ? 'Yes' : 'No'}</p>
@@ -159,11 +155,9 @@ const DashMentors = () => {
                   Approve
                 </Button>
               )}
-              {mentor.approvalStatus === 'approved' && !mentor.isAssigned && (
-                <Button color="primary" onClick={() => handleAssign(mentor._id)}>
-                  Assign
-                </Button>
-              )}
+              <Button color="danger" onClick={() => handleDeleteUser(mentor._id)}>
+                Delete
+              </Button>
             </div>
           </div>
         ))}

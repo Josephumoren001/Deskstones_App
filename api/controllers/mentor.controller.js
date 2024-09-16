@@ -2,7 +2,7 @@ import Mentor from '../models/mentor.model.js';
 import { errorHandler } from '../utils/error.js';
 
 export const applyAsMentor = async (req, res, next) => {
-  if (!req.body.fullName || !req.body.role || !req.body.bio || !req.body.imageUrl) {
+  if (!req.body.fullName || !req.body.role || !req.body.email || !req.body.linkedin || !req.body.bio || !req.body.imageUrl) {
     return next(errorHandler(400, 'Please provide all required fields'));
   }
   const newMentor = new Mentor({
@@ -88,6 +88,8 @@ export const updateMentor = async (req, res, next) => {
           fullName: req.body.fullName,
           role: req.body.role,
           bio: req.body.bio,
+          email: req.body.email,
+          linkedin: req.body.linkedin,
           imageUrl: req.body.imageUrl,
           isAssigned: req.body.isAssigned,
         },

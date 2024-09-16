@@ -15,8 +15,8 @@ const TermsAndConditions = () => {
   ];
 
   return (
-    <div className="bg-green-50 p-8 rounded-lg w-full mx-auto px-5 lg:px-20 py-32">
-        <div className="lg:max-w-4xl">
+    <div className="bg-green-50 p-8 rounded-lg w-full mx-auto px-5 lg:px-20 py-32 ">
+        <div className="lg:max-w-4xl dark:text-gray-700">
       <h1 className="text-4xl font-bold mb-6">Terms and conditions:</h1>
       <p className="mb-6">
         The following special terms and conditions apply to our training and consulting package:
