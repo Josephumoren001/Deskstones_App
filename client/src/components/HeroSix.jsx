@@ -10,11 +10,7 @@ const HeroSix = () => {
               Kids Can Code
             </h1>
             <p className="text-[1rem] lg:text-[1.375rem] text-white pt-5">
-              Stine and Anders founded andersjensenorg. Our mission is clear: Make
-              RPA and AI training straightforward and fun for everyone, from pros
-              to everyday users. With hands-on, practical, easy-to-follow courses
-              in Microsoft Copilot, Microsoft Power Automate, and OpenAI ChatGPT,
-              we make complex topics something anyone can get excited about.
+            "Our Kids Can Code" program introduces children to coding through fun, interactive coding sessions. Help your child build essential tech skills while exploring creativity and problem-solving. Register your child today!
             </p>
           </div>
           <div className="pt-10">

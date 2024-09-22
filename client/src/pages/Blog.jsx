@@ -39,9 +39,7 @@ const Blog = () => {
             Blog
           </h1>
           <p className="text-[1rem] lg:text-[1.375rem] dark:text-white pt-5">
-            Welcome to our blog with insights and inspiration about RPA and AI.
-            You will find expert articles, success stories, and the latest
-            trends that keep you ahead in automation.
+          Our blog is a platform where our mentors share insights, knowledge, and experiences. Through articles and posts, they provide valuable information and inspiration to help our community learn and grow.
           </p>
         </div>
       </MainHero>

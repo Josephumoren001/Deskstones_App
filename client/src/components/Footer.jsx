@@ -3,6 +3,7 @@ import LinkedinFooter from "../assets/smalllinkedin.svg";
 import discord from "../assets/discord.svg";
 import youtube from "../assets/youtube-logo.svg";
 import facebook from "../assets/facebook-logo.svg"
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="bg-[#0C273D] px-5 lg:px-20 text-white py-12 lg:py-20">
@@ -15,27 +16,27 @@ const Footer = () => {
           </p>
           <div className="flex gap-3 items-center mt-4 font-bold">
             <img src={envelope} alt="" />
-            <p>info@deskstone.com</p>
+            <p>info@deskstones.com</p>
           </div>
         </div>
         <div className="w-full lg:w-[154px]">
           <p className="font-bold text-lg">Quick Links</p>
           <div className="mt-2">
-            <a href="#" className="block mt-1">
+            <Link to='/programs' className="block mt-1">
               Programs
-            </a>
-            <a href="#" className="block mt-1">
+            </Link>
+            <Link to='consulting' className="block mt-1">
               Consulting
-            </a>
-            <a href="#" className="block mt-1">
+            </Link>
+            <Link to='mentors' className="block mt-1">
               Mentors
-            </a>
-            <a href="#" className="block mt-1">
+            </Link>
+            <Link to='blogs' className="block mt-1">
               Blog
-            </a>
-            <a href="#" className="block mt-1">
+            </Link>
+            <Link to='about' className="block mt-1">
               About
-            </a>
+            </Link>
           </div>
         </div>
         <div className="w-full lg:w-[126px]">

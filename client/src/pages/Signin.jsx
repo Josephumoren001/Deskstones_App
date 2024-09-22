@@ -52,7 +52,7 @@ export default function SignIn() {
            <img src={Desklogo2} alt="logo" className='w-3/4'/>
           </Link>
           <p className='text-sm mt-5'>
-            This is a demo project. You can sign in with your email and password
+           Sign in with your email and password
             or with Google.
           </p>
         </div>

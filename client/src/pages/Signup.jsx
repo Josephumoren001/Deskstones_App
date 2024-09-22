@@ -2,6 +2,8 @@ import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react'
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import OAuth from '../components/OAuth';
+import Desklogo2 from '../assets/Desklogo-2.png';
+
 
 const Signup = () => {
 
@@ -45,21 +47,15 @@ const navigate = useNavigate();
   return (
     <div className='min-h-screen mt-20'>
      <div className="flex p-3 max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-10">
-      <div className="flex-1">
-      <Link
-        to="/"
-        className="font-bold dark:text-white text-4xl"
-      >
-        <span className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
-          Desk
-        </span>{' '}
-        Stones
-      </Link>
-      <p className='text-sm mt-5'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat veritatis aut nulla ipsa odio ad alias. 
-        Voluptas aut itaque nostrum eligendi, in cupiditate dolore facere sed minima doloribus corporis dolorem.
-      </p>
-      </div>
+      <div className='flex-1'>
+          <Link to='/' className='font-bold dark:text-white text-4xl items-center sm:mx-auto'>
+           <img src={Desklogo2} alt="logo" className='w-3/4'/>
+          </Link>
+          <p className='text-sm mt-5'>
+           Sign up with your email and password
+            or with Google.
+          </p>
+        </div>
       <div className=" flex-1">
         <div className="">
           <form  className='flex flex-col gap-4' onSubmit={handleSubmit}>
@@ -69,7 +65,7 @@ const navigate = useNavigate();
             </div>
             <div>
               <Label value='Your email' />
-              <TextInput type='email' placeholder='name@unikcreativezone.com.ng' id='email' onChange={handleChange}/>
+              <TextInput type='email' placeholder='name@yourcompany.com' id='email' onChange={handleChange}/>
             </div>
             <div>
               <Label value='Your password' />

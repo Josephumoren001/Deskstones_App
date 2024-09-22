@@ -1,4 +1,5 @@
-import HeroImg from '../assets/Rectangle13.svg';
+import { Link } from 'react-router-dom';
+import HeroImg from '../assets/deskAbout.png';
 
 
 const HeroThree = () => {
@@ -10,20 +11,16 @@ const HeroThree = () => {
           <img src={HeroImg}/>
         </div>
         <div className="w-full lg:w-[50%]">
-          <p className="text-[#10CC6F] text-[1.5rem] font-bold pt-10">
+          {/* <p className="text-[#10CC6F] text-[1.5rem] font-bold pt-10">
             Your Expert from Youtube
-          </p>
-          <h1 className="text-[35px] lg:text-[50px] font-extrabold">RPA and AI courses <br className="hidden lg:block" />for everyone</h1>
+          </p> */}
+          <h1 className="text-[35px] lg:text-[50px] font-extrabold mt-10">Tech <br className="lg:block" />for everyone</h1>
           <p className="text-[1rem] lg:text-[1.375rem] pt-5">
-            Stine and Anders founded andersjensenorg. Our mission is clear: Make
-            RPA and AI training straightforward and fun for everyone, from pros
-            to everyday users. With hands-on, practical, easy-to-follow courses
-            in Microsoft Copilot, Microsoft Power Automate, and OpenAI ChatGPT,
-            we make complex topics something anyone can get excited about.
+          We are dedicated to making technology accessible to all. Our programs cover a wide range of fields, including business analysis, data science, RPA, automation, web development, coding and general software literacy. We empower individuals to thrive in a tech-driven world.
           </p>
           <div className="py-10 flex gap-3 ">
-            <button className="bg-[#10CC6F] text-white rounded-[0.3125rem] text-[0.875rem] font-bold px-[1.25rem] py-[0.625rem] hover:text-[#00CC6F] hover:border border-[#10CC6F] hover:bg-transparent ">All Programs</button>
-            <button className="border text-[#00CC6F] border-[#10CC6F] rounded-[0.3125rem] text-[0.875rem] font-bold px-[1.25rem] py-[0.625rem] hover:bg-[#10CC6F] hover:text-white">See More</button>
+            <Link to='about' className="bg-[#10CC6F] text-white rounded-[0.3125rem] text-[0.875rem] font-bold px-[1.25rem] py-[0.625rem] hover:text-[#00CC6F] hover:border border-[#10CC6F] hover:bg-transparent ">Learn More</Link>
+            {/* <Link className="border text-[#00CC6F] border-[#10CC6F] rounded-[0.3125rem] text-[0.875rem] font-bold px-[1.25rem] py-[0.625rem] hover:bg-[#10CC6F] hover:text-white">See More</Link> */}
           </div>
         </div>
       </div>

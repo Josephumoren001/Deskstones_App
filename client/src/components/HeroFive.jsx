@@ -8,14 +8,10 @@ const HeroFive = () => {
         <div className="">
           <p className="text-[#10CC6F] text-[1.5rem] font-bold">Our Programs</p>
           <h1 className="text-[35px] lg:text-[50px] text-white font-extrabold">
-            Distraction To Distinction
+            Distraction2Distinction
           </h1>
           <p className="text-[1rem] lg:text-[1.375rem] text-white pt-5">
-            Stine and Anders founded andersjensenorg. Our mission is clear: Make
-            RPA and AI training straightforward and fun for everyone, from pros
-            to everyday users. With hands-on, practical, easy-to-follow courses
-            in Microsoft Copilot, Microsoft Power Automate, and OpenAI ChatGPT,
-            we make complex topics something anyone can get excited about.
+          "Distraction to Distinction" is our program focused on social-emotional health, helping individuals build confidence and self-belief. By fostering a positive mindset, we support better learning and understanding. 
           </p>
         </div>
         <div className="pt-10">

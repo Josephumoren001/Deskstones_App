@@ -3,7 +3,7 @@ import { useForm, ValidationError } from '@formspree/react';
 
 function Register() {
   const [role, setRole] = useState('');
-  const [state, handleSubmit] = useForm("mblreayp");
+  const [state, handleSubmit] = useForm("xrbzwkaa"); 
 
   if (state.succeeded) {
     return (
@@ -94,9 +94,9 @@ function Register() {
                 className="text-gray-600 mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
               >
                 <option value="">Select Programs</option>
-                <option value="backend">Kid Can Code</option>
-                <option value="frontend">Distraction to Distinction</option>
-                <option value="ml">Consultation</option>
+                <option value="Kid Can Code">Kid Can Code</option>
+                <option value="Distraction2Distinction">Distraction2Distinction</option>
+                <option value="Consultation">Consultation</option>
                 
               </select>
               <ValidationError prefix="Role" field="role" errors={state.errors} />

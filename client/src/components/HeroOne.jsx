@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import youtube from "../assets/mdi_youtube.svg";
 import youtube2 from "../assets/Rectangle-45.svg";
 import ReactPlayer from 'react-player';
@@ -20,8 +21,8 @@ const HeroOne = () => {
             Tomorrow thrives on the choices we make today
           </p>
           <div className="py-16 flex gap-3">
-            <button className="bg-[#10CC6F] rounded-[0.3125rem] text-[0.875rem] font-bold px-[1.25rem] py-[0.625rem] hover:border border-[#10CC6F] hover:bg-transparent text-white">All Programs</button>
-            <button className="border border-[#10CC6F] rounded-[0.3125rem] text-[0.875rem] font-bold px-[1.25rem] py-[0.625rem] hover:bg-[#10CC6F]">See More</button>
+            <Link to='/programs' className="bg-[#10CC6F] rounded-[0.3125rem] text-[0.875rem] font-bold px-[1.25rem] py-[0.625rem] hover:border border-[#10CC6F] hover:bg-transparent text-white">All Programs</Link>
+            <Link target="__blank" to="https://www.youtube.com/@Deskstones" className="border border-[#10CC6F] rounded-[0.3125rem] text-[0.875rem] font-bold px-[1.25rem] py-[0.625rem] hover:bg-[#10CC6F]">See More</Link>
           </div>
         </div>
 
