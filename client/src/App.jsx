@@ -22,7 +22,7 @@ import Register from './components/Register';
 import Media from "./pages/Media";
 import BecomeMentor from "./pages/BecomeMentor";
 const App = () => {
-  const Search = lazy(() => import('./pages/search'));
+  const Search = lazy(() => import('./pages/Search'));
   return (
     <Suspense fallback={<div>Loading...</div>}>
    <BrowserRouter>
