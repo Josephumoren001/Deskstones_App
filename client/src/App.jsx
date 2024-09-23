@@ -1,5 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import React, { Suspense, lazy } from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import SignIn from './pages/Signin';
 import SignUp from './pages/Signup';
@@ -21,10 +20,13 @@ import Blog from "./pages/Blog";
 import Register from './components/Register';
 import Media from "./pages/Media";
 import BecomeMentor from "./pages/BecomeMentor";
+import Search from "./pages/search";
+
+
 const App = () => {
-  const Search = lazy(() => import('./pages/Search'));
+  
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+   
    <BrowserRouter>
    <ScrollToTop />
    <Header />
@@ -33,7 +35,7 @@ const App = () => {
       <Route path="/about" element={ <About /> } />
       <Route path="/sign-up" element={ <SignUp /> } />
       <Route path="/sign-in" element={ <SignIn /> } />
-      <Route path="/search" element={ <Search /> } />
+      <Route path='/search' element={<Search />} />
       <Route path="/programs" element={ <Programs /> } />
       <Route path="/consulting" element={ <Consulting /> } />
       <Route path="/mentors" element={ <Mentorship /> } />
@@ -58,7 +60,7 @@ const App = () => {
     </Routes>
     <Footer />
    </BrowserRouter>
-   </Suspense>
+ 
   )
 }
 
