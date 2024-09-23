@@ -8,6 +8,7 @@ import MentorRoutes from './routes/mentor.route.js';
 import cookieParser from 'cookie-parser';
 import commentRoutes from './routes/comment.route.js';
 import path from 'path';
+import { fileURLToPath } from 'url'; // Needed for __dirname in ES modules
 import helmet from 'helmet';  // Security middleware
 import rateLimit from 'express-rate-limit'; // Rate limiting
 import cors from 'cors'; // CORS handling
@@ -15,6 +16,10 @@ import cors from 'cors'; // CORS handling
 dotenv.config();
 
 const app = express();
+
+// Fix for __dirname in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Middleware: Security, CORS, JSON Parsing, Cookie Parsing
 app.use(helmet());

@@ -20,7 +20,7 @@ import Blog from "./pages/Blog";
 import Register from './components/Register';
 import Media from "./pages/Media";
 import BecomeMentor from "./pages/BecomeMentor";
-import Search from "./pages/search";
+import Search from "./pages/Search";
 
 
 const App = () => {
