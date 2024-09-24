@@ -9,7 +9,7 @@ const mentors = [
       'Learning is the foundation of growth. When we embrace it with curiosity and perseverance, there are no limits to what we can achieve.',
     image: 'https://i.imgur.com/VWzJwXs.png', // Replace with the actual image link
     socials: {
-      email: 'david.oku1@outlook.com',
+      email: 'mailto:david.oku1@outlook.com',
       linkedin: 'https://www.linkedin.com/in/masteroflogic/',
       youtube: '#',
     },
@@ -21,7 +21,7 @@ const mentors = [
       'A deep devotion to the curiosity of all that we know in respect to all that we do not to know -  is the centre piece  of learning and development.',
     image: 'https://i.imgur.com/Ma8GpMb.png', // Replace with the actual image link
     socials: {
-      email: 'promise.obi@deskstones.com',
+      email: 'mailto:promise.obi@deskstones.com',
       linkedin: 'https://www.linkedin.com/in/gods-promise-obi-b2a41926b/',
       youtube: '#',
     },
@@ -30,10 +30,10 @@ const mentors = [
     name: 'Chinyere Isiekwu',
     title: 'Co-founder & Brand Manager',
     description:
-      '',
-    image: 'https://i.imgur.com/Rmwq6w9.png', // Replace with the actual image link
+      'Success is built on a foundation of curiosity, resilience, and a relentless drive to create lasting value. With every challenge comes the opportunity to innovate and inspire progress.',
+    image: 'https://i.imgur.com/Rmwq6w9.png', 
     socials: {
-      email: 'cisiekwu@deskstones.com',
+      email: 'mailto:cisiekwu@deskstones.com',
       linkedin: 'https://www.linkedin.com/in/chinyere-isiekwu-mpa-msc?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       youtube: '#',
     },

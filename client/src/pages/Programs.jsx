@@ -6,7 +6,7 @@ import HeroSix from '../components/HeroSix';
 const Programs = () => {
     return (
       <div>
-        <MainHero>
+        {/* <MainHero>
           <div className="py-10 lg:py-20 w-full lg:w-[671px]">
             <p className="text-[#10CC6F] text-[1.5rem] font-bold">
               For Kids and Adult
@@ -21,7 +21,7 @@ const Programs = () => {
               ensure personal career and team growth.
             </p>
           </div>
-        </MainHero>
+        </MainHero> */}
         <HeroFive />
         <HeroSix />
       </div>
