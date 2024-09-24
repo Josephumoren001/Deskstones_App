@@ -5,7 +5,6 @@ import { FaMoon, FaSun } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleTheme } from '../redux/theme/themeSlice';
 import { signoutSuccess } from '../redux/user/userSlice';
-import DeskLogo from '../assets/DeskLogo.png';
 import { useEffect, useState } from 'react';
 
 const Header = () => {
@@ -56,7 +55,7 @@ const Header = () => {
         to="/"
         className="self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white w-[150px] h-[37px] mb-3"
       >
-        <img src={DeskLogo} alt="logo" className="w-full" />
+        <img src='https://i.imgur.com/h2qwDIk.png' alt="logo" className="w-full" />
       </Link>
 
       {/* Search Bar (visible only on large screens) */}
