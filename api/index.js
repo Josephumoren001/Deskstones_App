@@ -51,12 +51,12 @@ app.use('/api/comment', commentRoutes);
 app.use('/api/mentor', MentorRoutes);
 
 // Serve static files from the Vite frontend
-app.use(express.static(path.join(__dirname, 'client/dist')));
+// app.use(express.static(path.join(__dirname, 'client/dist')));
 
 // Route to serve the frontend
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
+// });
 
 // Error Handling Middleware
 app.use((err, req, res, next) => {
