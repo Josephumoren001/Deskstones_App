@@ -13,7 +13,6 @@ import cors from 'cors';
 
 dotenv.config();
 
-// Create a class for the App
 class Server {
   constructor() {
     this.app = express();
@@ -23,7 +22,6 @@ class Server {
     this.startServer();
   }
 
-  // Setup middleware
   configMiddleware() {
     this.app.set('trust proxy', 1);
     
@@ -36,6 +34,14 @@ class Server {
       origin: ['http://www.deskstones.com', 'https://www.deskstones.com', 'http://deskstones.com', 'https://deskstones.com'],
       credentials: true,
     }));
+    
+    this.app.use((req, res, next) => {
+      res.header('Access-Control-Allow-Origin', 'https://www.deskstones.com');
+      res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+      res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+      res.header('Access-Control-Allow-Credentials', 'true');
+      next();
+    });
     
     this.app.use((req, res, next) => {
       console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
@@ -51,7 +57,7 @@ class Server {
     });
     this.app.use(limiter);
   }
-  // Setup database connection
+
   setupDatabase() {
     mongoose.connect(process.env.MONGO)
       .then(() => {
@@ -62,8 +68,9 @@ class Server {
       });
   }
 
-  // Register API routes
   registerRoutes() {
+    this.app.options('*', cors()); // Add this line for handling OPTIONS requests
+    
     this.app.use('/api/user', userRoutes);
     this.app.use('/api/auth', authRoutes);
     this.app.use('/api/post', postRoutes);
@@ -83,9 +90,6 @@ class Server {
     });
   }
 
-
-  
-  // Start the server
   startServer() {
     const PORT = process.env.PORT || 8080;
     this.app.listen(PORT, () => {
@@ -93,15 +97,6 @@ class Server {
     });
   }
 }
-
-
-this.app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://www.deskstones.com');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Credentials', 'true');
-  next();
-});
 
 // Create a new instance of the Server class
 new Server();
