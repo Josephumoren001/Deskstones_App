@@ -27,7 +27,7 @@ class Server {
   configMiddleware() {
     this.app.use(helmet());
     this.app.use(cors({
-      origin: 'https://deskstones-a.onrender.com', // Replace with actual domain
+      origin: 'https://deskstones.com', // Replace with actual domain
       credentials: true,
     }));
     
