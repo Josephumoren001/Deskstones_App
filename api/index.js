@@ -83,6 +83,8 @@ class Server {
     });
   }
 
+
+  
   // Start the server
   startServer() {
     const PORT = process.env.PORT || 8080;
@@ -91,6 +93,15 @@ class Server {
     });
   }
 }
+
+
+this.app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://www.deskstones.com');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Credentials', 'true');
+  next();
+});
 
 // Create a new instance of the Server class
 new Server();
