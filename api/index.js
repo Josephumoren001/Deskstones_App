@@ -25,22 +25,32 @@ class Server {
 
   // Setup middleware
   configMiddleware() {
-    this.app.use(helmet());
+    this.app.set('trust proxy', 1);
+    
+    this.app.use(helmet({
+      contentSecurityPolicy: false,
+      crossOriginEmbedderPolicy: false,
+    }));
+    
     this.app.use(cors({
-      origin: 'http://www.deskstones.com', // Replace with actual domain
+      origin: ['http://www.deskstones.com', 'https://www.deskstones.com', 'http://deskstones.com', 'https://deskstones.com'],
       credentials: true,
     }));
     
+    this.app.use((req, res, next) => {
+      console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
+      next();
+    });
+    
     this.app.use(express.json());
     this.app.use(cookieParser());
-
+  
     const limiter = rateLimit({
-      windowMs: 15 * 60 * 1000, // 15 minutes
-      max: 100, // Limit each IP to 100 requests per windowMs
+      windowMs: 15 * 60 * 1000,
+      max: 100,
     });
     this.app.use(limiter);
   }
-
   // Setup database connection
   setupDatabase() {
     mongoose.connect(process.env.MONGO)
