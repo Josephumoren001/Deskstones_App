@@ -11,8 +11,8 @@ export default function CallToAction() {
                 Checkout these resources with 100 JavaScript Projects
             </p>
             <Button gradientDuoTone='greenToBlue' className='rounded-tl-xl rounded-bl-none'>
-                <a href="https://www.unikcreativezone.com.ng" target='_blank' rel='noopener noreferrer'>
-                    Visit Unik Creative Zone
+                <a href="https://www.deskstones.com" target='_blank' rel='noopener noreferrer'>
+                    Visit Deskstones.com
                 </a>
             </Button>
         </div>

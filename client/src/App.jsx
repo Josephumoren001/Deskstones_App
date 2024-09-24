@@ -3,7 +3,7 @@ import Home from './pages/Home';
 import SignIn from './pages/Signin';
 import SignUp from './pages/Signup';
 import About from './pages/About';
-import Project from './pages/Project';
+
 import Dashboard from './pages/Dashboard';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -55,7 +55,7 @@ const App = () => {
       </Route>
 
       
-      <Route path="/project" element={ <Project /> } />
+      
       <Route path="/post/:postSlug" element={ <PostPage /> } />
     </Routes>
     <Footer />

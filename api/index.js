@@ -26,7 +26,11 @@ class Server {
   // Setup middleware
   configMiddleware() {
     this.app.use(helmet());
-    this.app.use(cors());
+    this.app.use(cors({
+      origin: 'https://deskstones-a.onrender.com', // Replace with actual domain
+      credentials: true,
+    }));
+    
     this.app.use(express.json());
     this.app.use(cookieParser());
 

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import PostCard from '../components/PostCard';
 
+
 export default function Search() {
   const [sidebarData, setSidebarData] = useState({
     searchTerm: '',
