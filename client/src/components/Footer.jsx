@@ -54,7 +54,7 @@ const Footer = () => {
                 src={LinkedinFooter}
                 className="w-6 h-6"
               />
-              <a href="#">LinkedIn</a>
+              <a target="__blank" href="https://www.linkedin.com/company/deskstones">LinkedIn</a>
             </div>
             <div className="flex gap-2 items-center mb-2">
               <img
@@ -62,7 +62,7 @@ const Footer = () => {
                 alt="YouTube Icon"
                 className="w-6 h-6"
               />
-              <a href="#">YouTube</a>
+              <a target="__blank" href="https://youtube.com/@deskstones?si=xKnNFOy8f06g8uyv">YouTube</a>
             </div>
             <div className="flex gap-2 items-center">
               <img
@@ -128,7 +128,9 @@ const Footer = () => {
             <p>Privacy Policy</p>
         </div>
         <div>
+          <Link to='/consulting'>
             <p>Contact Us</p>
+          </Link>
         </div>
       </div>
     </div>

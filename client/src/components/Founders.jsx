@@ -7,7 +7,7 @@ const mentors = [
     title: 'Founder & Coach',
     description:
       'Learning is the foundation of growth. When we embrace it with curiosity and perseverance, there are no limits to what we can achieve.',
-    image: 'https://i.imgur.com/VWzJwXs.png', // Replace with the actual image link
+    image: 'https://i.imgur.com/3PBu28s.png', // Replace with the actual image link
     socials: {
       email: 'mailto:david.oku1@outlook.com',
       linkedin: 'https://www.linkedin.com/in/masteroflogic/',
@@ -31,7 +31,7 @@ const mentors = [
     title: 'Co-founder & Brand Manager',
     description:
       'Success is built on a foundation of curiosity, resilience, and a relentless drive to create lasting value. With every challenge comes the opportunity to innovate and inspire progress.',
-    image: 'https://i.imgur.com/Rmwq6w9.png', 
+    image: 'https://i.imgur.com/MVKwYIK.png', 
     socials: {
       email: 'mailto:cisiekwu@deskstones.com',
       linkedin: 'https://www.linkedin.com/in/chinyere-isiekwu-mpa-msc?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',

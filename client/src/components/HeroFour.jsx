@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import HeroFourr from "../assets/kidcode.png";
 const HeroFour = () => {
     return (
-      <div className="bg-[#E7F9E9] px-5 py-12 lg:px-20 lg:py-32">
-        <div className="flex flex-col lg:flex-row-reverse justify-between">
-          <div className="w-[482px] h-[482px]">
-            <img src={HeroFourr} className="w-full" />
+      <div className="bg-[#E7F9E9] px-5 py-12 lg:px-20 lg:py-32 overflow-hidden">
+        <div className="flex flex-col lg:flex-row-reverse items-center justify-between">
+          <div className="w-[400px] h-[482px] ">
+            <img src={HeroFourr} className="w-full " />
           </div>
           <div className="w-full lg:w-[50%]">
             <p className="text-[#10CC6F] text-[1.5rem] font-bold pt-10 lg:pt-0">

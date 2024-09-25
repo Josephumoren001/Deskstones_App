@@ -18,8 +18,8 @@ const Mission = () => {
 <b> Empathy: </b> Understanding and supporting others in their learning journey.
         </p>
         <p className="pt-3 text-[18px]">
-       <b> Perseverance: </b> Committing to overcoming challenges and achieving growth.
-        Passion: Driving positive change through a deep love for knowledge and innovation.
+       <b> Perseverance: </b> Committing to overcoming challenges and achieving growth. <br />
+       <b> Passion:</b> Driving positive change through a deep love for knowledge and innovation.
         </p>
       </div>
     </div>
