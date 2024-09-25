@@ -4,10 +4,10 @@
   "description": "MERN stack application",
   "type": "module",
   "main": "api/index.js",
- "scripts": {
-  "start": "node api/index.js"
-},
-
+  "scripts": {
+    "start": "node api/index.js",
+    "dev": "nodemon api/index.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
